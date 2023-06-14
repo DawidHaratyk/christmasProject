@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* VARIABLES */
+
+:root {
+  /* Colors */
+  --first-color: #da2535;
+  --first-color-alt: #c42130;
+  --first-color-send: #de3b49;
+  --title-color: #161212;
+  --text-color: #5b5757;
+  --text-color-light: #8f8a8a;
+  --body-color: #fafafa;
+  --container-color: #fff;
+  /* Fonts */
+  --body-font: 'Poppins', sans-serif;
+  --biggest-font-size: 32px;
+  --h2-font-size: 24px;
+  --h3-font-size: 20px;
+  --normal-font-size: 14px;
+  --small-font-size: 12px;
+  /* Height */
+  --nav-height: 60px;
+}
+
+body.dark-theme {
+  --first-color-send: #161212;
+  --title-color: #f3f1f1;
+  --text-color: #d1c7c8;
+  --body-color: #251d1e;
+  --container-color: #302728;
+}
+
+/* FOR MANY SELECTORS */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  background-color: var(--body-color);
+}
+
+p {
+  color: var(--text-color);
+}
+
+img {
+  width: 100%;
+}
