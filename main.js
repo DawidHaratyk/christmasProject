@@ -100,7 +100,7 @@ const showElementsOnScroll = () => {
   appearElements.forEach((element) => {
     const positionFromTop = element.getBoundingClientRect().top;
 
-    if (positionFromTop < innerHeight / 2) {
+    if (positionFromTop < innerHeight / 1.3) {
       element.classList.add('move-animation');
     }
   });
@@ -117,3 +117,4 @@ const showElementsOnScroll = () => {
 };
 
 window.addEventListener('scroll', showElementsOnScroll);
+document.addEventListener('DOMContentLoaded', showElementsOnScroll);
