@@ -15,7 +15,7 @@ window.addEventListener('scroll', showArrow);
 // SHOW NAVIGATION
 
 const bars = document.querySelector('.bars');
-const menuNav = document.querySelector('.menu-nav');
+const menuNav = document.querySelector('.menu__nav');
 const switchContainer = document.querySelector('.change-theme');
 
 const showNav = () => {
@@ -57,37 +57,34 @@ colorSwitch.addEventListener('click', changeThemeColor);
 
 // ACTIVE LI ELEMENT
 
-const liElements = [...document.querySelectorAll('.navigation-li')];
+const liElements = [...document.querySelectorAll('.navigation__li')];
 const shareItem = document.getElementById('share');
 const decorationItem = document.getElementById('decoration');
 const accessoryItem = document.getElementById('accessory');
 
 window.addEventListener('scroll', function () {
   if (scrollY <= 660) {
-    liElements.forEach((item) => (item.style.borderBottom = 'none'));
-    liElements[0].style.borderBottom = '2px solid #DA2535';
+    liElements.forEach((item) =>
+      item.classList.remove('active-link-border-bottom')
+    );
+    liElements[0].classList.add('active-link-border-bottom');
   } else if (scrollY > 660 && scrollY <= 1300) {
-    liElements.forEach((item) => (item.style.borderBottom = 'none'));
-    liElements[1].style.borderBottom = '2px solid #DA2535';
-  } else if (scrollY > 1300 && scrollY <= 2515) {
-    liElements.forEach((item) => (item.style.borderBottom = 'none'));
-    liElements[2].style.borderBottom = '2px solid #DA2535';
-  } else if (scrollY > 2515) {
-    liElements.forEach((item) => (item.style.borderBottom = 'none'));
-    liElements[3].style.borderBottom = '2px solid #DA2535';
+    liElements.forEach((item) =>
+      item.classList.remove('active-link-border-bottom')
+    );
+    liElements[1].classList.add('active-link-border-bottom');
+  } else if (scrollY > 1300 && scrollY <= 2015) {
+    console.log('xdddd');
+    liElements.forEach((item) =>
+      item.classList.remove('active-link-border-bottom')
+    );
+    liElements[2].classList.add('active-link-border-bottom');
+  } else if (scrollY > 2015) {
+    liElements.forEach((item) =>
+      item.classList.remove('active-link-border-bottom')
+    );
+    liElements[3].classList.add('active-link-border-bottom');
   }
-});
-
-// CHANGE HEART ICONS
-
-const hearts = document.querySelectorAll('.heart');
-const showHeart = document.querySelector('.for-heart-display');
-
-hearts.forEach((item) => {
-  item.addEventListener('click', function () {
-    const whiteHearts = document.querySelector('.white-heart');
-    whiteHearts.classList.toggle('.for-heart-display');
-  });
 });
 
 // ANIMATIONS ON SCROLL

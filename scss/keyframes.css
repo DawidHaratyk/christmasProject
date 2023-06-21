@@ -1,0 +1,24 @@
+@keyframes moveArrow {
+  0% {
+    transform: translateY(0);
+  }
+  37.5% {
+    transform: translateY(-30px);
+  }
+  75% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes moveFromTop {
+  0% {
+    transform: translateY(-80px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}/*# sourceMappingURL=keyframes.css.map */

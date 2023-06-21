@@ -1,5 +1,3 @@
 {
-  "extends": [
-    "stylelint-config-selleo/bem"
-  ]
+  "extends": ["stylelint-config-selleo/bem"]
 }

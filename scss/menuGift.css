@@ -1,36 +1,31 @@
-.menu-gift {
+.menu__gift {
   display: flex;
   flex-direction: column;
   margin-bottom: 50px;
 }
-
-.menu-gift-image {
+.menu__image {
   margin: 50px auto;
   height: 350px;
   animation: moveFromTop 0.8s;
   transition: 0.8s;
 }
-
-.menu-gift-content {
+.menu__content {
   width: 90%;
   margin: 0 auto;
   animation: moveFromTop 0.8s;
   transition: 0.8s;
 }
-
-.menu-gift-headline {
+.menu__headline {
   font-size: var(--biggest-font-size);
   margin-bottom: 20px;
   color: var(--title-color);
 }
-
-.menu-gift-text {
+.menu__text {
   font-size: var(--normal-font-size);
   margin-bottom: 25px;
   line-height: 180%;
 }
-
-.menu-gift-btn {
+.menu__btn {
   margin-bottom: 20px;
   color: var(--container-color);
   padding: 18px 20px;
@@ -40,34 +35,29 @@
   cursor: pointer;
   outline: none;
 }
-
-.btn {
+.menu .btn {
   position: relative;
-  width: 120px;
   border: 2px solid var(--first-color);
+  overflow: hidden;
 }
-
-.btn::before {
+.menu .btn::before {
   content: "";
   position: absolute;
   top: 0;
-  right: 50%;
   bottom: 0;
-  left: 50%;
+  left: 0;
+  transform: scaleX(0);
+  width: 100%;
   opacity: 0;
   background-color: var(--container-color);
   transition: 0.3s;
 }
-
-.btn:hover::before {
+.menu .btn:hover::before {
   opacity: 1;
-  left: 0;
-  right: 0;
-  transition: 0.3s;
+  transform: scaleX(1);
   z-index: -1;
 }
-
-.btn:hover {
+.menu .btn:hover {
   color: var(--first-color-alt);
   z-index: 1;
 }/*# sourceMappingURL=menuGift.css.map */

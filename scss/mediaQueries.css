@@ -2,103 +2,83 @@
   .navigation__text {
     font-weight: bold;
   }
-
   .menu__gift {
     flex-direction: row-reverse;
     align-items: center;
     width: 90%;
     margin: 140px auto 50px auto;
   }
-
   .menu__image {
     width: 40%;
     height: 350px;
   }
-
   .sharing-container {
     flex-direction: row-reverse;
     width: 100%;
     padding-right: 20px;
   }
-
   .sharing-content {
     justify-content: center;
   }
-
   .sharing__headline,
   .sharing__text,
   .sharing__btn {
     text-align: left;
   }
-
   .sharing__image {
     height: 350px;
     padding-right: 15px;
   }
-
   .decoration-items {
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
   }
-
   .decoration-item {
     width: calc(50% - 20px);
     margin: 10px;
   }
-
   .accessories-image {
     width: 55%;
   }
-
   .send-container {
     flex-direction: row;
     justify-content: space-around;
     padding-right: 10px;
   }
-
   .send-image {
     height: 240px;
   }
-
   .send-headline {
     text-align: left;
   }
-
   .send-text {
     text-align: left;
   }
-
   .send-content {
     padding-right: 20px;
   }
-
   .footer__companies,
   .footer__socials {
     width: 50%;
   }
-
   .footer__socials {
     padding-left: 25px;
   }
-
   .navigation-text {
     margin-left: 130px;
   }
 }
-
 @media (min-width: 960px) {
   .bars {
     display: none;
   }
-
   ul {
     flex-direction: row;
     justify-content: space-around;
     padding-left: 15px;
     width: 430px;
   }
-
   .menu__nav {
     position: fixed;
     left: 45%;
@@ -107,33 +87,27 @@
     box-shadow: 0 0 0 white;
     border-radius: 0;
   }
-
   .navigation__li {
     margin: 10px 40px 0 0;
   }
-
   .navigation__li:nth-of-type(1) {
     margin-top: 10px;
   }
-
   .navigation__li:nth-child(4) {
     margin-bottom: 0;
   }
-
   .decoration-item,
   .accessories-item {
     width: calc(33.33% - 20px);
   }
-
   .send-container {
     width: 90%;
     margin: 100px auto;
     border-radius: 15px;
   }
-
   .change-theme {
     position: absolute;
     top: 10px;
     right: 20px;
   }
-}
+}/*# sourceMappingURL=mediaQueries.css.map */

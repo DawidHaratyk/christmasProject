@@ -28,7 +28,7 @@
 }
 
 .footer__content {
-  display: flex
+  display: flex;
 }
 
 .christmas-gift,
@@ -86,4 +86,4 @@
   .social__links-container {
     display: flex;
   }
-}
+}/*# sourceMappingURL=linksAndSocials.css.map */
