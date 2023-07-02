@@ -53,6 +53,42 @@ p {
   border-bottom: 2px solid #DA2535;
 }
 
+.btn {
+  position: relative;
+  padding: 15px 25px;
+  background-color: var(--first-color);
+  border: 1px solid var(--first-color);
+  border-radius: 5px;
+  color: var(--container-color);
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  width: 100%;
+  opacity: 0;
+  background-color: var(--container-color);
+  transition: 0.3s;
+}
+
+.btn:hover::before {
+  opacity: 1;
+  transform: scaleX(1);
+  z-index: -1;
+}
+
+.btn:hover {
+  color: var(--first-color-alt);
+  z-index: 1;
+}
+
 @keyframes moveArrow {
   0% {
     transform: translateY(0);
@@ -77,25 +113,34 @@ p {
     opacity: 1;
   }
 }
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+
 .menu__nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: fixed;
-  left: 5%;
-  top: var(--nav-height);
-  width: 90%;
+  left: 10%;
+  top: -400px;
+  width: 80%;
   box-shadow: 0 2px 6px rgba(65, 11, 16, 0.15);
   border-radius: 10px;
   overflow: hidden;
   background-color: var(--container-color);
-  transform: translateY(-365px);
   transition: 0.3s;
+  z-index: 10;
 }
 
 .menu__nav.active {
   align-items: center;
-  transform: translateY(10px);
+  top: var(--nav-height);
 }
 
-ul {
+.menu__list {
   display: flex;
   flex-direction: column;
   list-style: none;
@@ -110,7 +155,7 @@ ul {
 }
 
 .navigation__li:hover {
-  transform: scale(1.1, 1.1);
+  transform: scale(1.1);
 }
 
 .navigation__a {
@@ -120,28 +165,6 @@ ul {
 
 .navigation__a:hover {
   color: var(--first-color);
-}
-
-.navigation__li:nth-of-type(1) {
-  margin-top: 30px;
-}
-
-.navigation__li:nth-child(4) {
-  margin-bottom: 30px;
-}
-
-.navigation {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: var(--nav-height);
-  background-color: var(--container-color);
-  box-shadow: 0 2px 2px -2px var(--first-color);
-  z-index: 3;
 }
 
 .navigation__text {
@@ -160,7 +183,6 @@ ul {
   height: 24px;
   border: 3px solid black;
   border-radius: 15px;
-  margin-right: 100px;
   background-color: rgb(235, 230, 230);
   margin: 0 auto 25px auto;
   cursor: pointer;
@@ -221,12 +243,6 @@ ul {
   background-color: var(--container-color);
 }
 
-.send-content {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-
 .send-headline {
   font-size: var(--h3-font-size);
   color: var(--title-color);
@@ -273,50 +289,16 @@ ul {
   cursor: pointer;
 }
 
-.sharing {
+.two-columns {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  width: 90%;
-  margin: 0 auto 50px auto;
-  overflow: hidden;
+  margin: 50px 60px;
 }
-.sharing__content {
-  display: flex;
-  flex-direction: column;
-  transform: translateX(80px);
-  opacity: 0;
-  transition: 0.8s;
+.two-columns__image {
+  width: 30%;
 }
-.sharing__headline {
-  font-size: var(--h3-font-size);
-  margin-bottom: 25px;
-  text-align: center;
-  color: var(--title-color);
-}
-.sharing__text {
-  line-height: 180%;
-  font-size: var(--normal-font-size);
-  text-align: center;
-  margin-bottom: 20px;
-}
-.sharing__btn {
-  padding: 18px 20px;
-  margin: 0 auto 30px auto;
-  background-color: var(--first-color);
-  font-weight: bold;
-  border-radius: 5px;
-  color: var(--container-color);
-  outline: none;
-  cursor: pointer;
-  z-index: 1;
-}
-.sharing__image {
-  height: 350px;
-  align-self: center;
-  transform: translateX(-80px);
-  opacity: 0;
-  transition: 0.8s;
+.two-columns__btn {
+  margin-top: 25px;
 }
 
 .decoration-container {
@@ -533,7 +515,7 @@ ul {
   width: 100%;
   opacity: 0;
   background-color: var(--container-color);
-  transition: 0.3s;
+  transition: 0.3s opacity transform z-index;
 }
 .menu .btn:hover::before {
   opacity: 1;
@@ -554,16 +536,12 @@ ul {
   color: var(--text-color-light);
 }
 
-.our-company {
+.footer__company {
   display: flex;
   flex-direction: column;
 }
 
-.gift-text {
-  color: var(--text-color-light);
-}
-
-.company-link {
+.company__link {
   text-decoration: none;
   margin-bottom: 10px;
   color: var(--text-color-light);
@@ -576,21 +554,6 @@ ul {
 
 .footer__content {
   display: flex;
-}
-
-.christmas-gift,
-.our-company,
-.our-services,
-.social {
-  margin-bottom: 25px;
-  transform: translateY(-50px);
-  opacity: 0;
-  transition: 0.8s;
-  transition-delay: 0.1s;
-}
-
-.our-company {
-  transition-delay: 0.2s;
 }
 
 .our-services {
@@ -606,11 +569,15 @@ ul {
   flex-direction: column;
 }
 
-.services-link {
+.services__link {
   margin-bottom: 10px;
 }
 
-.social-link {
+.footer__link-a {
+  color: black;
+}
+
+.social__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -618,23 +585,40 @@ ul {
   transition: 0.3s;
 }
 
-.social-link:hover {
+.footer__link {
+  text-decoration: none;
+  color: var(--text-color-light);
+}
+
+.footer__links-container {
+  gap: 20px;
+}
+
+.footer__headline {
+  margin-top: 20px;
+}
+
+.footer__link-a:hover {
   color: var(--first-color-send);
 }
 
-.social-link__a {
-  display: block;
+.footer__link-a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: var(--text-color-light);
   width: 48px;
   height: 48px;
+  transition-duration: 0.3s;
+  transition-property: color;
 }
 
 @media (min-width: 800px) {
-  .social__links-container {
+  .footer__links-container {
     display: flex;
   }
 }
-.footer-text {
+.footer__text {
   margin-bottom: 20px;
   text-align: center;
   font-size: var(--small-font-size);
@@ -718,22 +702,31 @@ ul {
   }
 }
 @media (min-width: 960px) {
+  .menu__nav {
+    position: static;
+  }
   .bars {
     display: none;
   }
-  ul {
+  ul.menu__list {
     flex-direction: row;
+    align-items: center;
     justify-content: space-around;
     padding-left: 15px;
-    width: 430px;
+    width: 500px;
+    background-color: transparent;
   }
   .menu__nav {
-    position: fixed;
-    left: 45%;
-    top: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     width: 500px;
-    box-shadow: 0 0 0 white;
+    box-shadow: none;
     border-radius: 0;
+    background-color: transparent;
+  }
+  .menu__nav.active {
+    top: 10px;
   }
   .navigation__li {
     margin: 10px 40px 0 0;
@@ -746,7 +739,7 @@ ul {
   }
   .decoration-item,
   .accessories-item {
-    width: calc(33.33% - 20px);
+    flex: 1;
   }
   .send-container {
     width: 90%;
@@ -754,8 +747,6 @@ ul {
     border-radius: 15px;
   }
   .change-theme {
-    position: absolute;
-    top: 10px;
-    right: 20px;
+    margin: 0;
   }
 }/*# sourceMappingURL=style.css.map */

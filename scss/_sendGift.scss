@@ -15,12 +15,6 @@
   background-color: var(--container-color);
 }
 
-.send-content {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-
 .send-headline {
   font-size: var(--h3-font-size);
   color: var(--title-color);
@@ -65,4 +59,4 @@
   font-weight: bold;
   outline: none;
   cursor: pointer;
-}/*# sourceMappingURL=sendGift.css.map */
+}

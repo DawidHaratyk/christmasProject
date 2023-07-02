@@ -7,16 +7,12 @@
   color: var(--text-color-light);
 }
 
-.our-company {
+.footer__company {
   display: flex;
   flex-direction: column;
 }
 
-.gift-text {
-  color: var(--text-color-light);
-}
-
-.company-link {
+.company__link {
   text-decoration: none;
   margin-bottom: 10px;
   color: var(--text-color-light);
@@ -28,22 +24,7 @@
 }
 
 .footer__content {
-  display: flex;
-}
-
-.christmas-gift,
-.our-company,
-.our-services,
-.social {
-  margin-bottom: 25px;
-  transform: translateY(-50px);
-  opacity: 0;
-  transition: 0.8s;
-  transition-delay: 0.1s;
-}
-
-.our-company {
-  transition-delay: 0.2s;
+  display: flex
 }
 
 .our-services {
@@ -59,11 +40,15 @@
   flex-direction: column;
 }
 
-.services-link {
+.services__link {
   margin-bottom: 10px;
 }
 
-.social-link {
+.footer__link-a {
+  color: black
+}
+
+.social__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -71,19 +56,36 @@
   transition: 0.3s;
 }
 
-.social-link:hover {
+.footer__link {
+  text-decoration: none;
+  color: var(--text-color-light);
+}
+
+.footer__links-container {
+  gap: 20px
+}
+
+.footer__headline {
+  margin-top: 20px;
+}
+
+.footer__link-a:hover {
   color: var(--first-color-send);
 }
 
-.social-link__a {
-  display: block;
+.footer__link-a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: var(--text-color-light);
   width: 48px;
   height: 48px;
+  transition-duration: 0.3s;
+  transition-property: color;
 }
 
 @media (min-width: 800px) {
-  .social__links-container {
+  .footer__links-container {
     display: flex;
   }
-}/*# sourceMappingURL=linksAndSocials.css.map */
+}

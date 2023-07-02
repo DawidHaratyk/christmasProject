@@ -58,7 +58,7 @@
     width: 100%;
     opacity: 0;
     background-color: var(--container-color);
-    transition: 0.3s;
+    transition: 0.3s opacity transform z-index;
   }
   
   .btn:hover::before {
