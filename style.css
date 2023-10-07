@@ -527,7 +527,7 @@ p {
   z-index: 1;
 }
 
-.our-links {
+.footer {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -535,73 +535,40 @@ p {
   margin: 0 auto 40px auto;
   color: var(--text-color-light);
 }
-
 .footer__company {
   display: flex;
   flex-direction: column;
 }
-
-.company__link {
-  text-decoration: none;
-  margin-bottom: 10px;
-  color: var(--text-color-light);
-}
-
-.our-links h4 {
+.footer h4 {
   margin-bottom: 10px;
   color: var(--title-color);
 }
-
 .footer__content {
   display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
 }
-
-.our-services {
-  transition-delay: 0.3s;
-}
-
-.social {
-  transition-delay: 0.4s;
-}
-
-.our-services {
-  display: flex;
-  flex-direction: column;
-}
-
-.services__link {
-  margin-bottom: 10px;
-}
-
 .footer__link-a {
+  text-align: center;
   color: black;
 }
-
-.social__link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 5px 20px 0 0;
-  transition: 0.3s;
-}
-
 .footer__link {
+  display: block;
   text-decoration: none;
+  font-size: 14px;
   color: var(--text-color-light);
 }
-
 .footer__links-container {
+  display: flex;
   gap: 20px;
 }
-
 .footer__headline {
   margin-top: 20px;
 }
-
 .footer__link-a:hover {
   color: var(--first-color-send);
 }
-
 .footer__link-a {
   display: flex;
   justify-content: center;
@@ -612,17 +579,29 @@ p {
   transition-duration: 0.3s;
   transition-property: color;
 }
-
-@media (min-width: 800px) {
-  .footer__links-container {
-    display: flex;
-  }
+.footer__last-text {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-color-light);
 }
 .footer__text {
   margin-bottom: 20px;
-  text-align: center;
-  font-size: var(--small-font-size);
+  font-size: 14px;
   color: var(--text-color-light);
+}
+.footer__column:nth-child(2), .footer__column:nth-child(3) {
+  flex-direction: column;
+}
+@media (max-width: 1120px) {
+  .footer__column {
+    flex-basis: 50%;
+  }
+}
+@media (max-width: 660px) {
+  .footer__column {
+    flex-basis: 100%;
+  }
 }
 
 .move-animation {
