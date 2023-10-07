@@ -1,0 +1,13 @@
+.two-columns {
+    display: flex;
+    align-items: center;
+    margin: 50px 60px;
+
+    &__image {
+        width: 30%;
+    }
+
+    &__btn {
+        margin-top: 25px;
+    }
+}

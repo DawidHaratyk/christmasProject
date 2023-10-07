@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "stylelint-config-selleo": "stylelint-config-selleo"
+  },
+  "dependencies": {
+    "@selleo/stylelint-config-selleo": "github:Selleo/stylelint-config-selleo",
+    "init": "^0.1.2",
+    "stylelint-config-selleo": "^0.1.1"
+  }
+}
